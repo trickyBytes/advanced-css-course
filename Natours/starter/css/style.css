@@ -53,6 +53,7 @@ body {
   transform: translate(-50%, -50%);
   /* this then move the box to center of page as the position commands above move the start of the 
   text box to the position not centered at position i.e in relation to the element */
+  text-align: center;
 }
 
 .heading-primary {
@@ -60,6 +61,7 @@ body {
   text-transform: uppercase;
 
   backface-visibility: hidden; /* Stops shaky element to animation */
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -112,4 +114,30 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/* sudo class is lnk */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block; /* treats this like text */
+    border-radius: 100px; /* rounded edges */
+    transition: all .2s; /* need to have this on initial state */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translate(-1px); /* in relation to initial state */
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
