@@ -1,3 +1,19 @@
+/*
+0-600:      Phone
+600 - 900:  Tablet Portrait
+900 - 1200: Table landsacape
+[1200 - 1800] is where out normal styles apply
+1800px + :  Big Desktop 
+*/
+/*
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,17 +51,26 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -79,8 +104,8 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
